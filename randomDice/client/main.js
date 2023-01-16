@@ -4,6 +4,8 @@ import {
   enableElement,
   getNode,
   getNodes,
+  invisibleElement,
+  visibleElement,
 } from "./lib/index.js";
 
 // const rollingDiceButton = getNode(".buttonGroup > button:nth-child(1)");
@@ -11,8 +13,9 @@ import {
 const [rollingDiceButton, recordButton, resetButton] = getNodes(
   ".buttonGroup > button"
 );
+let recordListWrapper = getNode(".recordListWrapper");
 
-const handlerRollingDice = (() => {
+const handleRollingDice = (() => {
   let isRolling = false;
   let stopAnimation;
 
@@ -32,4 +35,14 @@ const handlerRollingDice = (() => {
   };
 })();
 
-rollingDiceButton.addEventListener("click", handlerRollingDice);
+let handleRecord = () => {
+  visibleElement(recordListWrapper);
+};
+
+let handleReset = () => {
+  invisibleElement(recordListWrapper);
+};
+
+rollingDiceButton.addEventListener("click", handleRollingDice);
+recordButton.addEventListener("click", handleRecord);
+resetButton.addEventListener("click", handleReset);
