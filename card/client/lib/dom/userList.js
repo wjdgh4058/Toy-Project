@@ -1,3 +1,6 @@
+import { getNode } from "./getNode.js";
+import { insertLast } from "./insert.js";
+
 export const createUserCard = ({
   id = "",
   name = "",
@@ -26,6 +29,10 @@ export const createUserCard = ({
   </div>
   <button class="delete">삭제</button>
 </article>`;
+};
+
+export const renderUserCard = (target, data) => {
+  insertLast(target, data);
 };
 
 // console.log(

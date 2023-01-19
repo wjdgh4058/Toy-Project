@@ -2,6 +2,7 @@ import {
   createUserCard,
   getNode,
   insertLast,
+  renderUserCard,
   tiger,
   xhrData,
 } from "./lib/index.js";
@@ -19,7 +20,7 @@ const rendingUserList = async () => {
 
   let newCard = createUserCard(userData);
 
-  insertLast(userCardContainer, newCard);
+  renderUserCard(userCardContainer, newCard);
 };
 
 rendingUserList();
