@@ -48,8 +48,8 @@ h2 {
   width: 100%;
   min-width: 400px;
   position: relative;
-  /* transform: translateX(100px);
-  opacity: 0; */
+  transform: translateX(100px);
+  opacity: 0;
   /* transition: all 0.3s; */
 }
 
