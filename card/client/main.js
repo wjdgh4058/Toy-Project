@@ -1,4 +1,12 @@
-import { insertLast, tiger, xhrData } from "./lib/index.js";
+import {
+  createUserCard,
+  getNode,
+  insertLast,
+  tiger,
+  xhrData,
+} from "./lib/index.js";
+
+const userCardContainer = getNode(".user-card-inner");
 
 const rendingUserList = async () => {
   let response = await tiger.get(
@@ -6,7 +14,12 @@ const rendingUserList = async () => {
   );
 
   let userData = response.data;
-  console.log(response.data);
+
+  console.log(userData);
+
+  let newCard = createUserCard(userData);
+
+  insertLast(userCardContainer, newCard);
 };
 
 rendingUserList();
