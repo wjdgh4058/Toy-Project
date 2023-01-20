@@ -22,6 +22,7 @@ const createUserCard = ({
   `;
 };
 
+// createSpinner
 const createSpinner = (
   size = 100,
   loadingMessage = "유저 정보를 가져오는중.."
