@@ -136,7 +136,6 @@ export const renderUserCard = (target, data) => {
   insertLast(target, createUserCard(data));
 };
 
-// renderSpinner
 export const renderSpinner = (target) => {
   insertLast(target, createSpinner());
 };
