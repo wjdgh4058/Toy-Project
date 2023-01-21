@@ -141,7 +141,6 @@ export const renderSpinner = (target) => {
   insertLast(target, createSpinner());
 };
 
-// renderEmptyCard
 export const renderEmptyCard = (target) => {
   insertLast(target, createEmptyCard());
 };
