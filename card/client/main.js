@@ -60,7 +60,7 @@ async function rendingUserList() {
 rendingUserList();
 
 // 삭제 버튼을 클릭하면 콘솔창에 '삭제' 글자가 출력이 될 수 있도록 만들어 주세요.
-
+//
 function handler(e) {
   let deleteButton = e.target.closest("button");
   let article = e.target.closest("article");
